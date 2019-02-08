@@ -11,8 +11,10 @@ pipeline {
     stage('CI Build and push snapshot') {
       when {
         anyOf {
+          branch 'develop'
           branch 'feature*'
           branch 'bugfix*'
+          branch 'PR-*'
         }        
       }
       environment {
