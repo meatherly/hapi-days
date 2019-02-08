@@ -2,6 +2,7 @@ pipeline {
   agent {
     label "jenkins-nodejs"
   }
+  
   environment {
     ORG = 'jenkins'
     APP_NAME = 'hapi-days'
