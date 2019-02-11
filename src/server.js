@@ -39,6 +39,21 @@ server.route({
   }
 });
 
+server.route({
+  method: "GET",
+  path: "/users",
+  handler: (request, h) => {
+    return [
+      {
+        firstName: "Michael"
+      },
+      {
+        firstName: "Patrick"
+      }
+    ];
+  }
+});
+
 const init = async () => {
   await server.start();
   console.log(`Server running at: ${server.info.uri}`);
