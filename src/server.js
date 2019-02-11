@@ -25,9 +25,32 @@ server.route({
 
 server.route({
   method: "GET",
+  path: "/turnitup/to",
+  handler: (request, h) => {
+    return `11!!!!`;
+  }
+});
+
+server.route({
+  method: "GET",
   path: "/{name}",
   handler: (request, h) => {
     return "Hello, " + encodeURIComponent(request.params.name) + "!!";
+  }
+});
+
+server.route({
+  method: "GET",
+  path: "/users",
+  handler: (request, h) => {
+    return [
+      {
+        firstName: "Michael"
+      },
+      {
+        firstName: "Patrick"
+      }
+    ];
   }
 });
 
