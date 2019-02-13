@@ -11,6 +11,7 @@ server.route({
   method: "GET",
   path: "/",
   handler: (request, h) => {
+    console.log("root path hit");
     return "Hello, world!";
   }
 });
